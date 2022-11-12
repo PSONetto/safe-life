@@ -1,0 +1,25 @@
+﻿<Window x:Class="SafeLife.Apresentacao.frmInicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SafeLife.Apresentacao"
+        mc:Ignorable="d"
+        Title="frmInicio" Height="450" Width="800">
+    <Grid>
+        <Menu HorizontalAlignment="Center" Height="27" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.502,0.069">
+            <MenuItem Header="Titular" Padding="5, 5" >
+                <MenuItem x:Name="mniCadastroTitular" Header="Cadastro" Click="mniCadastroTitular_Click" />
+                <MenuItem x:Name="mniPEETitular" Header="Pesquisar, editar e excluir" />
+            </MenuItem>
+            <MenuItem Header="Empresa">
+                <MenuItem x:Name="mniCadastroEmpresa" Header="Cadastro"/>
+                <MenuItem x:Name="mniPEE" Header="Pesquisar, editar e excluir"/>
+            </MenuItem>
+            <MenuItem Header="Usuario">
+                <MenuItem x:Name="mniCadastroUsuario" Header="Cadastro"/>
+                <MenuItem x:Name="mniPEEUsuario" Header="Pesquisar, editar e excluir"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
