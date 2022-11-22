@@ -8,15 +8,16 @@ namespace SafeLife.Modelo
 {
     internal class PessoaFisica
     {
-        public String cpf { get; set; }
-        public String rg { get; set; }
-        public String nome { get; set; }
-        public String nomeMae { get; set; }
-        public String nomePai { set; get; }
-        public DateTime datNasc { set; get; }
+        public String Cpf { get; set; }
+        public String Rg { get; set; }
+        public String Nome { get; set; }
+        public String NomeMae { get; set; }
+        public String NomePai { set; get; }
+        public DateTime DatNasc { set; get; }
         public Endereco endereco = new Endereco();
-        public String email { set; get; }
-        public String telefone { set; get; }
-        public String celular { set; get; }
+        public String Email { set; get; }
+        public String Telefone { set; get; }
+        public String Celular { set; get; }
+        public Historico historico = new Historico();
     }
 }

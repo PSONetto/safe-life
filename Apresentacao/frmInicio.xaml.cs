@@ -24,10 +24,22 @@ namespace SafeLife.Apresentacao
             InitializeComponent();
         }
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mniCadastroTitular_Click(object sender, EventArgs e)
         {
             frmCadastroTitular frmCad = new frmCadastroTitular();
             frmCad.ShowDialog();
+        }
+
+        private void mniPEETitular_Click(object sender, EventArgs e)
+        {
+            frmPEETitular frmPEE = new frmPEETitular();
+            frmPEE.ShowDialog();
+        }
+
+        private void mniPEEBeneficiario_Click(object sender, EventArgs e)
+        {
+            frmPEEBeneficiarios frmPEEBenef = new frmPEEBeneficiarios();
+            frmPEEBenef.ShowDialog();
         }
     }
 }

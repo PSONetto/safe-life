@@ -8,12 +8,12 @@ namespace SafeLife.Modelo
 {
     internal class Endereco
     {
-        public String cidade { get; set; }
-        public String estado { get; set; }
-        public String cep { get; set; }
-        public String rua { get; set; }
-        public int numero { get; set; }
-        public String bairro { get; set; }
-        public String complemento { get; set; }
+        public String Cidade { get; set; }
+        public String Estado { get; set; }
+        public String Cep { get; set; }
+        public String Rua { get; set; }
+        public String Numero { get; set; }
+        public String Bairro { get; set; }
+        public String Complemento { get; set; }
     }
 }

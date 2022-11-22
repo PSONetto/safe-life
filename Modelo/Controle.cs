@@ -28,7 +28,7 @@ namespace SafeLife.Modelo
             return usuario;
         }
 
-        public void CadastrarTitular(List<String> listaTitular)
+        public void cadastrarTitular(List<String> listaTitular)
         {
             this.Mensagem = "";
 
@@ -37,37 +37,205 @@ namespace SafeLife.Modelo
             if (validacao.Mensagem.Equals(""))
             {
                 Titular titular = new Titular();
-                titular.nome = listaTitular[1];
-                titular.datNasc = DateTime.Parse(listaTitular[2]);
-                titular.cpf = listaTitular[3];
-                titular.rg = listaTitular[4];
-                titular.nomeMae = listaTitular[5];
-                titular.nomePai = listaTitular[6];
-                titular.telefone = listaTitular[7];
-                titular.celular = listaTitular[8];
-                titular.email = listaTitular[9];
-                titular.endereco.cep = listaTitular[10];
-                titular.endereco.rua = listaTitular[11];
-                if (listaTitular[12] == "")
-                {
-                    titular.endereco.numero = 0;
-                }
-                else
-                {
-                    titular.endereco.numero = int.Parse(listaTitular[12]);
-                }
-                titular.endereco.bairro = listaTitular[13];
-                titular.endereco.complemento = listaTitular[14];
-                titular.endereco.estado = listaTitular[15];
-                titular.endereco.cidade = listaTitular[16];
+                titular.Nome = listaTitular[1];
+                titular.DatNasc = DateTime.Parse(listaTitular[2]);
+                titular.Cpf = listaTitular[3];
+                titular.Rg = listaTitular[4];
+                titular.NomeMae = listaTitular[5];
+                titular.NomePai = listaTitular[6];
+                titular.Telefone = listaTitular[7];
+                titular.Celular = listaTitular[8];
+                titular.Email = listaTitular[9];
+                titular.endereco.Cep = listaTitular[10];
+                titular.endereco.Rua = listaTitular[11];
+                titular.endereco.Numero = listaTitular[12];
+                titular.endereco.Bairro = listaTitular[13];
+                titular.endereco.Complemento = listaTitular[14];
+                titular.endereco.Estado = listaTitular[15];
+                titular.endereco.Cidade = listaTitular[16];
+                titular.Plano = listaTitular[17];
+                titular.historico.Cardiaco = listaTitular[18] == "1" ? true : false;
+                titular.historico.Asma = listaTitular[19] == "1" ? true : false;
+                titular.historico.Genetico = listaTitular[20] == "1" ? true : false;
+                titular.historico.Mental = listaTitular[21] == "1" ? true : false;
+                titular.historico.Cancer = listaTitular[22] == "1" ? true : false;
+                titular.historico.Alzheimer = listaTitular[23] == "1" ? true : false;
+                titular.historico.Deficiente = listaTitular[24] == "1" ? true : false;
+                titular.contrato.DatContrato = DateTime.Parse(listaTitular[25]);
 
                 TitularDAO titularDAO = new TitularDAO();
                 titularDAO.cadastrarTitular(titular);
-                this.Mensagem = "Titular cadastrado com sucesso.";
+                this.Mensagem = titularDAO.Mensagem;
             }
             else
             {
                 this.Mensagem = validacao.Mensagem;
+            }
+        }
+
+        public Titular pesquisarTitular(String id)
+        {
+            Validacao validacao = new Validacao();
+            Titular titular = new Titular();
+            TitularDAO titularDAO = new TitularDAO();
+
+
+            if (validacao.validaCPF(id) == true)
+            {
+                titular = titularDAO.pesquisarTitular(id);
+                this.Mensagem = titularDAO.Mensagem;
+            }
+            else
+            {
+                this.Mensagem = "CPF inválido";
+            }
+
+            return titular;
+        }
+
+        public void cadastrarEmpresa(List<String> listaEmpresa)
+        {
+            this.Mensagem = "";
+
+            validacao.validarEmpresa(listaEmpresa);
+
+            if (validacao.Mensagem.Equals(""))
+            {
+                Empresa empresa = new Empresa();
+                empresa.Nome = listaEmpresa[1];
+                empresa.CNPJ = listaEmpresa[3];
+                empresa.Telefone = listaEmpresa[7];
+                empresa.Email = listaEmpresa[9];
+                empresa.endereco.Cep = listaEmpresa[10];
+                empresa.endereco.Rua = listaEmpresa[11];
+                empresa.endereco.Numero = listaEmpresa[12];
+                empresa.endereco.Bairro = listaEmpresa[13];
+                empresa.endereco.Complemento = listaEmpresa[14];
+                empresa.endereco.Estado = listaEmpresa[15];
+                empresa.endereco.Cidade = listaEmpresa[16];
+
+                EmpresaDAO empresaDAO = new EmpresaDAO();
+                empresaDAO.cadastrarEmpresa(empresa);
+                this.Mensagem = "Empresa cadastrada.";
+            }
+            else
+            {
+                this.Mensagem = validacao.Mensagem;
+            }
+        }
+
+        public void excluirTitular(String cpf)
+        {
+            Validacao validacao = new Validacao();
+            TitularDAO titularDAO = new TitularDAO();
+
+
+            if (validacao.validaCPF(cpf) == true)
+            {
+                titularDAO.excluirTitular(cpf);
+                this.Mensagem = titularDAO.Mensagem;
+            }
+            else
+            {
+                this.Mensagem = "CPF inválido";
+            }
+        }
+
+        public void cadastrarUsuario(List<String> listaUsuario)
+        {
+            this.Mensagem = "";
+
+            validacao.validarUsuario(listaUsuario);
+
+            if (validacao.Mensagem.Equals(""))
+            {
+                Usuario usuario = new Usuario();
+                usuario.Nome = listaUsuario[1];
+                usuario.Email = listaUsuario[3];
+                usuario.Senha = listaUsuario[7];
+
+
+                UsuarioDAO usuarioDAO = new UsuarioDAO();
+                usuarioDAO.cadastrarUsuario(usuario);
+                this.Mensagem = "Empresa cadastrada.";
+            }
+            else
+            {
+                this.Mensagem = validacao.Mensagem;
+            }
+        }
+
+        public void cadastrarBeneficiario(List<String> listaBeneficiario, String cpf)
+        {
+            this.Mensagem = "";
+
+            validacao.validarTitular(listaBeneficiario);
+
+            if (validacao.Mensagem.Equals(""))
+            {
+                Beneficiario beneficiario = new Beneficiario();
+                beneficiario.Nome = listaBeneficiario[1];
+                beneficiario.DatNasc = DateTime.Parse(listaBeneficiario[2]);
+                beneficiario.Cpf = listaBeneficiario[3];
+                beneficiario.Rg = listaBeneficiario[4];
+                beneficiario.NomeMae = listaBeneficiario[5];
+                beneficiario.NomePai = listaBeneficiario[6];
+                beneficiario.Telefone = listaBeneficiario[7];
+                beneficiario.Celular = listaBeneficiario[8];
+                beneficiario.Email = listaBeneficiario[9];
+                beneficiario.endereco.Cep = listaBeneficiario[10];
+                beneficiario.endereco.Rua = listaBeneficiario[11];
+                beneficiario.endereco.Numero = listaBeneficiario[12];
+                beneficiario.endereco.Bairro = listaBeneficiario[13];
+                beneficiario.endereco.Complemento = listaBeneficiario[14];
+                beneficiario.endereco.Estado = listaBeneficiario[15];
+                beneficiario.endereco.Cidade = listaBeneficiario[16];
+                beneficiario.Relacao = listaBeneficiario[17];
+
+                BeneficiarioDAO beneficiarioDAO = new BeneficiarioDAO();
+                beneficiarioDAO.cadastrarBeneficiario(beneficiario, cpf);
+                this.Mensagem = beneficiarioDAO.Mensagem;
+            }
+            else
+            {
+                this.Mensagem = validacao.Mensagem;
+            }
+        }
+
+        public Beneficiario pesquisarBeneficiario(String id)
+        {
+            Validacao validacao = new Validacao();
+            Beneficiario beneficiario = new Beneficiario();
+            BeneficiarioDAO beneficiarioDAO = new BeneficiarioDAO();
+
+
+            if (validacao.validaCPF(id) == true)
+            {
+                beneficiario = beneficiarioDAO.pesquisarBeneficiario(id);
+                this.Mensagem = beneficiarioDAO.Mensagem;
+            }
+            else
+            {
+                this.Mensagem = "CPF inválido";
+            }
+
+            return beneficiario;
+        }
+
+        public void excluirBeneficiario(String cpf)
+        {
+            Validacao validacao = new Validacao();
+            BeneficiarioDAO beneficiarioDAO = new BeneficiarioDAO();
+
+
+            if (validacao.validaCPF(cpf) == true)
+            {
+                beneficiarioDAO.excluirBeneficiario(cpf);
+                this.Mensagem = beneficiarioDAO.Mensagem;
+            }
+            else
+            {
+                this.Mensagem = "CPF inválido";
             }
         }
     }

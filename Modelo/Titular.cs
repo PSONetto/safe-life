@@ -8,7 +8,9 @@ namespace SafeLife.Modelo
 {
     internal class Titular : PessoaFisica
     {
-        public int codTitular { get; set; }
-        public List<Beneficiario> beneficiarios { get; set; }
+        public int CodTitular { get; set; }
+        public List<Beneficiario> Beneficiarios { get; set; }
+        public Contrato contrato = new Contrato();
+        public String Plano { set; get; }
     }
 }

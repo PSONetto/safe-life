@@ -30,3 +30,15 @@ C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\refint\SafeLife.dl
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\SafeLife.pdb
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\SafeLife.genruntimeconfig.cache
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\ref\SafeLife.dll
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroEmpresa.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroEmpresa.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroUsuario.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroUsuario.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEETitular.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEETitular.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroBeneficiario.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroBeneficiario.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEEmpresa.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEEmpresa.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEBeneficiarios.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEBeneficiarios.baml

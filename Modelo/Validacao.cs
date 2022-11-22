@@ -13,9 +13,8 @@ namespace SafeLife.Modelo
 
         private static Regex apenasNumeros = new Regex(@"^[0-9]*$", RegexOptions.IgnorePatternWhitespace);
         private static Regex apenasLetras = new Regex(@"^[\p{L}\s]+$", RegexOptions.IgnorePatternWhitespace);
-        private static Regex regexEmails = new Regex(@"/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i", RegexOptions.IgnorePatternWhitespace);
 
-        public static bool validaCPF(String cpf)
+        public bool validaCPF(String cpf)
         {
             if (cpf.Length != 11 || !apenasNumeros.IsMatch(cpf))
             {
@@ -229,7 +228,7 @@ namespace SafeLife.Modelo
                 }
                 else
                 {
-                    if (!regexEmails.IsMatch(titular[9]))
+                    if (!titular[9].Contains('@') || !titular[9].Contains(".com"))
                     {
                         this.Mensagem = "Email inválido!";
                         return;
@@ -297,7 +296,7 @@ namespace SafeLife.Modelo
                 }
                 else
                 {
-                    if (apenasLetras.IsMatch(titular[16]))
+                    if (!apenasLetras.IsMatch(titular[16]))
                     {
                         this.Mensagem = "O campo Cidade deve conter apenas letras!";
                         return;
@@ -308,6 +307,18 @@ namespace SafeLife.Modelo
             {
                 this.Mensagem = "Login ou Senha inválidos!";
             }
+        }
+
+        public void validarEmpresa(List<String> listaEmpresa)
+        {
+            this.Mensagem = "";
+
+
+        }
+
+        public void validarUsuario(List<String> listaUsuario)
+        {
+            this.Mensagem = "";
         }
     }
 }

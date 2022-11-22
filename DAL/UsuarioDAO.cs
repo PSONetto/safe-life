@@ -13,7 +13,7 @@ namespace SafeLife.DAL
         Conexao con = new Conexao();
         SqlDataReader dr;
         public String mensagem = "";
-        public void adicionarUsuario(Usuario usuario)
+        public void cadastrarUsuario(Usuario usuario)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText =
@@ -34,7 +34,6 @@ namespace SafeLife.DAL
             {
                 this.mensagem = "Erro de cadastro";
             }
-            int i = 0;
         }
 
         public void login(String nome, String senha)

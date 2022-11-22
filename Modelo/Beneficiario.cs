@@ -8,7 +8,9 @@ namespace SafeLife.Modelo
 {
     internal class Beneficiario : PessoaFisica
     {
-        public String relacao { get; set; }
-        public int porcentagem { get; set; }
+        public String Relacao { get; set; }
+        public int CodTitular { get; set; }
+        public String CPFTitular { get; set; }
+        public String NomeTitular { get; set; }
     }
 }

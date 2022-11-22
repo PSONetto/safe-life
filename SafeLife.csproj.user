@@ -7,18 +7,54 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Apresentacao\frmCadastroBeneficiario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Apresentacao\frmCadastroEmpresa.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Apresentacao\frmCadastroTitular.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Apresentacao\frmCadastroUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Apresentacao\frmInicio.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Apresentacao\frmPEEBeneficiarios.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Apresentacao\frmPEEEmpresa.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Apresentacao\frmPEETitular.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Apresentacao\frmCadastroBeneficiario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmCadastroEmpresa.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Apresentacao\frmCadastroTitular.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Apresentacao\frmCadastroUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Apresentacao\frmInicio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmPEEBeneficiarios.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmPEEEmpresa.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmPEETitular.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

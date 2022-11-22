@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="frmInicio" Height="450" Width="800">
+        Title="Safe Life" Height="450" Width="800">
     <Grid>
         <Menu HorizontalAlignment="Center" Height="27" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.502,0.069">
             <MenuItem Header="Titular" Padding="5, 5" >
                 <MenuItem x:Name="mniCadastroTitular" Header="Cadastro" Click="mniCadastroTitular_Click" />
-                <MenuItem x:Name="mniPEETitular" Header="Pesquisar, editar e excluir" />
+                <MenuItem x:Name="mniPEETitular" Header="Pesquisar, editar e excluir" Click="mniPEETitular_Click" />
+                <MenuItem x:Name="mniPEEBeneficiario" Header="Beneficiários" Click="mniPEEBeneficiario_Click" />
             </MenuItem>
             <MenuItem Header="Empresa">
                 <MenuItem x:Name="mniCadastroEmpresa" Header="Cadastro"/>

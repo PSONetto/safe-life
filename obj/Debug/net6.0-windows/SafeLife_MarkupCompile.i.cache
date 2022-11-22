@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\plini\source\repos\SafeLife\App.xaml
-3-731865414
+9638222729
 
-17-1742887228
+28150457292
 195-1288021596
-Apresentacao\frmCadastroTitular.xaml;Apresentacao\frmInicio.xaml;MainWindow.xaml;
+Apresentacao\frmCadastroBeneficiario.xaml;Apresentacao\frmCadastroEmpresa.xaml;Apresentacao\frmCadastroTitular.xaml;Apresentacao\frmCadastroUsuario.xaml;Apresentacao\frmInicio.xaml;Apresentacao\frmPEEBeneficiarios.xaml;Apresentacao\frmPEEEmpresa.xaml;Apresentacao\frmPEETitular.xaml;MainWindow.xaml;
 
-True
+False
 
