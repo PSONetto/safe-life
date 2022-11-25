@@ -24,6 +24,12 @@ namespace SafeLife.Apresentacao
             InitializeComponent();
         }
 
+        public frmInicio(String nome)
+        {
+            InitializeComponent();
+            lblBemvindo.Content = "Bem-vindo, " + nome + "!";
+        }
+
         private void mniCadastroTitular_Click(object sender, EventArgs e)
         {
             frmCadastroTitular frmCad = new frmCadastroTitular();
@@ -40,6 +46,30 @@ namespace SafeLife.Apresentacao
         {
             frmPEEBeneficiarios frmPEEBenef = new frmPEEBeneficiarios();
             frmPEEBenef.ShowDialog();
+        }
+
+        private void mniCadastroEmpresa_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastroEmpresa frmCadEmp = new frmCadastroEmpresa();
+            frmCadEmp.ShowDialog();
+        }
+
+        private void mniPEEEmpresa_Click(object sender, RoutedEventArgs e)
+        {
+            frmPEEEmpresa frmPEEEmp = new frmPEEEmpresa();
+            frmPEEEmp.ShowDialog();
+        }
+
+        private void mniCadastroUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastroUsuario frmCadUsu = new frmCadastroUsuario();
+            frmCadUsu.ShowDialog();
+        }
+        
+        private void mniPEEFunc_Click(object sender, RoutedEventArgs e)
+        {
+            frmPEEFunc frmPEEF = new frmPEEFunc();
+            frmPEEF.ShowDialog();
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="frmPEEBeneficiarios" Height="650" Width="800">
+        Title="Safe Life | Beneficiário" Height="650" Width="800">
     <Grid>
         <Label Content="Pesquisar Beneficiário" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
         <Label Content="Nome *" HorizontalAlignment="Left" Margin="34,129,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
@@ -78,6 +78,6 @@
         <TextBox x:Name="txbPesquisar" HorizontalAlignment="Left" Margin="147,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
         <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="384,80,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" Padding="15,5,15,5" Click="btnPesquisar_Click"/>
         <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="305,535,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnEditar_Click"/>
-        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="420,535,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="420,535,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnExcluir_Click"/>
     </Grid>
 </Window>

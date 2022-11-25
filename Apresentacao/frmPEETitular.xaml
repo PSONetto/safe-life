@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="frmPEETitular" Height="650" Width="800">
+        Title="Safe Life | Titular" Height="650" Width="800">
     <Grid>
 
-        <Label Content="Pesqusiar Titular" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <Label Content="Pesquisar Titular" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
         <Label Content="Nome *" HorizontalAlignment="Left" Margin="30,139,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
         <TextBox x:Name="txbNome" HorizontalAlignment="Left" Margin="30,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
         <Label Content="Data de Nascimento *" HorizontalAlignment="Left" Margin="30,188,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
@@ -79,16 +79,20 @@
         <CheckBox x:Name="chbDeficiencia" Content="Deficiência Física" HorizontalAlignment="Left" Margin="510,429,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
         <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="305,535,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnEditar_Click"/>
         <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="420,535,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="647,22,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" />
         <Label Content="Data do Contrato" HorizontalAlignment="Left" Margin="30,455,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
         <DatePicker x:Name="dtpDatContrato" HorizontalAlignment="Left" Margin="30,481,0,0" VerticalAlignment="Top" Width="210" FontFamily="Arial"/>
         <Label Content="Selecione um Plano" HorizontalAlignment="Left" Margin="270,455,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
         <ComboBox x:Name="cmbPlano" HorizontalAlignment="Left" Margin="270,483,0,0" VerticalAlignment="Top" Width="210" SelectedValuePath="Tag" SelectedValue="{Binding IsActive, Mode=TwoWay}">
-            <ComboBoxItem Content="1" Tag="Premium"/>
+            <ComboBoxItem Content="Básico" Tag="1" />
+            <ComboBoxItem Content="Morte e Invalidez" Tag="2" />
+            <ComboBoxItem Content="Safe Pets" Tag="3" />
+            <ComboBoxItem Content="Premium" Tag="4" />
         </ComboBox>
         <Label Content="Pesquisar CPF: " HorizontalAlignment="Left" Margin="30,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
         <TextBox x:Name="txbPesquisar" HorizontalAlignment="Left" Margin="147,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
         <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="384,80,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" Padding="15,5,15,5" Click="btnPesquisar_Click"/>
         <Button x:Name="btnBeneficiario" Content="+ Beneficiário" HorizontalAlignment="Left" Margin="103,536,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" Padding="15,5,15,5" Click="btnAdicionarBeneficiario_Click"/>
+        <Label Content="Empresa?: " HorizontalAlignment="Left" Margin="510,457,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
+        <TextBox x:Name="txbEmpresa" HorizontalAlignment="Left" Margin="510,485,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14" IsReadOnly="True"/>
     </Grid>
 </Window>

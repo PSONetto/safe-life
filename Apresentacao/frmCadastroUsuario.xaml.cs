@@ -40,10 +40,5 @@ namespace SafeLife.Apresentacao
 
             MessageBox.Show(controle.Mensagem, "Erro no Cadastro", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
     }
 }

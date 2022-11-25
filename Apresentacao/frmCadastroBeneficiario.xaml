@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="frmCadastroBeneficiario" Height="500" Width="800">
+        Title="Safe Life | Cadastro de Beneficiário" Height="500" Width="800">
     <Grid>
         <Label Content="Adicionar Beneficiário" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
         <Label Content="Nome *" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>

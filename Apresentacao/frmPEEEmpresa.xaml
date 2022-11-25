@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="frmPEEEmpresa" Height="450" Width="800">
+        Title="Safe Life | Empresa" Height="600" Width="510">
     <Grid>
-        
+        <Label Content="Pesquisar Empresa" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
+        <Label Content="Razão Social *" HorizontalAlignment="Left" Margin="31,118,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Margin="31,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="CNPJ *" HorizontalAlignment="Left" Margin="31,167,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbCNPJ" HorizontalAlignment="Left" Margin="31,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Telefone *" HorizontalAlignment="Left" Margin="31,216,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Margin="31,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="E-mail *" HorizontalAlignment="Left" Margin="31,265,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Margin="31,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="CEP *" HorizontalAlignment="Left" Margin="31,314,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbCEP" HorizontalAlignment="Left" Margin="31,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Rua *" HorizontalAlignment="Left" Margin="31,363,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbRua" HorizontalAlignment="Left" Margin="31,389,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Número *" HorizontalAlignment="Left" Margin="268,118,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbNumero" HorizontalAlignment="Left" Margin="268,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Bairro *" HorizontalAlignment="Left" Margin="268,167,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbBairro" HorizontalAlignment="Left" Margin="268,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Complemento" HorizontalAlignment="Left" Margin="268,216,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbComplemento" HorizontalAlignment="Left" Margin="268,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Estado *" HorizontalAlignment="Left" Margin="268,265,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <ComboBox x:Name="cmbEstado" HorizontalAlignment="Left" Margin="268,291,0,0" VerticalAlignment="Top" Width="105">
+            <ComboBoxItem Content="SP"/>
+            <ComboBoxItem Content="AC"/>
+            <ComboBoxItem Content="AL"/>
+            <ComboBoxItem Content="AP"/>
+            <ComboBoxItem Content="AM"/>
+            <ComboBoxItem Content="BA"/>
+            <ComboBoxItem Content="CE"/>
+            <ComboBoxItem Content="DF"/>
+            <ComboBoxItem Content="ES"/>
+            <ComboBoxItem Content="GO"/>
+            <ComboBoxItem Content="MA"/>
+            <ComboBoxItem Content="MT"/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="MG"/>
+            <ComboBoxItem Content="PA"/>
+            <ComboBoxItem Content="PB"/>
+            <ComboBoxItem Content="PR"/>
+            <ComboBoxItem Content="PE"/>
+            <ComboBoxItem Content="PI"/>
+            <ComboBoxItem Content="RJ"/>
+            <ComboBoxItem Content="RN"/>
+            <ComboBoxItem Content="RS"/>
+            <ComboBoxItem Content="RO"/>
+            <ComboBoxItem Content="RR"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="SE"/>
+            <ComboBoxItem Content="TO"/>
+        </ComboBox>
+        <Label Content="Cidade *" HorizontalAlignment="Left" Margin="268,314,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <TextBox x:Name="txbCidade" HorizontalAlignment="Left" Margin="268,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <TextBox x:Name="txbPesquisar" HorizontalAlignment="Left" Margin="31,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
+        <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="268,77,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" Padding="15,5,15,5" Click="btnPesquisar_Click"/>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Center" Margin="0,452,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnEditar_Click"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="358,452,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Pesquisar CNPJ" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
+        <Button x:Name="btnFuncionario" Content="+ Funcionário" HorizontalAlignment="Left" Margin="41,452,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnFuncionario_Click"/>
     </Grid>
 </Window>

@@ -5,22 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="Safe Life" Height="450" Width="800">
+        Title="Safe Life | Início" Height="450" Width="800">
     <Grid>
-        <Menu HorizontalAlignment="Center" Height="27" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.502,0.069">
+        <Menu  HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.502,0.069" Panel.ZIndex="100">
             <MenuItem Header="Titular" Padding="5, 5" >
                 <MenuItem x:Name="mniCadastroTitular" Header="Cadastro" Click="mniCadastroTitular_Click" />
                 <MenuItem x:Name="mniPEETitular" Header="Pesquisar, editar e excluir" Click="mniPEETitular_Click" />
                 <MenuItem x:Name="mniPEEBeneficiario" Header="Beneficiários" Click="mniPEEBeneficiario_Click" />
             </MenuItem>
             <MenuItem Header="Empresa">
-                <MenuItem x:Name="mniCadastroEmpresa" Header="Cadastro"/>
-                <MenuItem x:Name="mniPEE" Header="Pesquisar, editar e excluir"/>
+                <MenuItem x:Name="mniCadastroEmpresa" Header="Cadastro" Click="mniCadastroEmpresa_Click"/>
+                <MenuItem x:Name="mniPEE" Header="Pesquisar, editar e excluir" Click="mniPEEEmpresa_Click"/>
+                <MenuItem x:Name="mniPEEFunc" Header="Funcionários" Click="mniPEEFunc_Click"/>
             </MenuItem>
-            <MenuItem Header="Usuario">
-                <MenuItem x:Name="mniCadastroUsuario" Header="Cadastro"/>
-                <MenuItem x:Name="mniPEEUsuario" Header="Pesquisar, editar e excluir"/>
+            <MenuItem Header="Usuário">
+                <MenuItem x:Name="mniCadastroUsuario" Header="Cadastro" Click="mniCadastroUsuario_Click"/>
             </MenuItem>
         </Menu>
+        <Rectangle HorizontalAlignment="Left" Height="434" Stroke="Blue" VerticalAlignment="Center" Width="300">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF13208C" Offset="0.148"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image HorizontalAlignment="Left" Height="260" Margin="20,35,0,0" VerticalAlignment="Top" Width="260" Source="/0760bf62-9f08-4ecb-b418-a95f8298e01b-removebg-preview.png" Panel.ZIndex="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="260" Margin="20,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="260" RadiusX="360" RadiusY="360" Fill="White"/>
+        <Label x:Name="lblBemvindo" Content="" HorizontalAlignment="Left" Margin="330,60,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="26"/>
+        <Label Content="Este é o sistema de gerenciamento de seguros " HorizontalAlignment="Left" Margin="330,105,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="da Safe Life. Aqui você poderá cadastrar, buscar " HorizontalAlignment="Left" Margin="330,138,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="editar e apagar registros de titulares, beneficiários" HorizontalAlignment="Left" Margin="330,171,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="empresas e usuários do sistema." HorizontalAlignment="Left" Margin="330,204,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="Utilize o menu de navegação acima para utilizar" HorizontalAlignment="Left" Margin="330,264,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="as ferramentas disponíveis no sistema." HorizontalAlignment="Left" Margin="330,297,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+        <Label Content="PIM ADS - UNIP 2022" HorizontalAlignment="Left" Margin="653,361,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

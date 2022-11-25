@@ -57,6 +57,7 @@ namespace SafeLife.Apresentacao
                 chbAlzheimer.IsChecked = titular.historico.Alzheimer;
                 chbDeficiencia.IsChecked = titular.historico.Deficiente;
                 dtpDatContrato.Text = titular.contrato.DatContrato.ToString();
+                txbEmpresa.Text = titular.CodEmpresa;
             }
             else
             {
@@ -86,6 +87,7 @@ namespace SafeLife.Apresentacao
                 chbCancer.IsChecked = false;
                 chbAlzheimer.IsChecked = false;
                 chbDeficiencia.IsChecked = false;
+                txbEmpresa.Text = "";
             }
         }
 
@@ -111,7 +113,7 @@ namespace SafeLife.Apresentacao
             listTitular.Add(txbComplemento.Text);
             listTitular.Add(cmbEstado.Text);
             listTitular.Add(txbCidade.Text);
-            listTitular.Add(cmbPlano.Text);
+            listTitular.Add(cmbPlano.SelectedValue.ToString());
             listTitular.Add((bool)chbCardiaco.IsChecked ? "1" : "0");
             listTitular.Add((bool)chbAsma.IsChecked ? "1" : "0");
             listTitular.Add((bool)chbGenetica.IsChecked ? "1" : "0");
@@ -120,8 +122,9 @@ namespace SafeLife.Apresentacao
             listTitular.Add((bool)chbAlzheimer.IsChecked ? "1" : "0");
             listTitular.Add((bool)chbDeficiencia.IsChecked ? "1" : "0");
             listTitular.Add(dtpDatContrato.Text);
+            listTitular.Add(txbEmpresa.Text);
 
-            controle.cadastrarTitular(listTitular);
+            controle.editarTitular(listTitular);
 
             if (controle.Mensagem.ToLower().Contains("erro"))
             {
@@ -155,11 +158,6 @@ namespace SafeLife.Apresentacao
         {
             frmCadastroBeneficiario frmCadBenef = new frmCadastroBeneficiario(txbCPF.Text);
             frmCadBenef.ShowDialog();
-        }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

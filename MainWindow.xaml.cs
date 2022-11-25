@@ -34,7 +34,7 @@ namespace SafeLife
             controle.buscarUsuario(txbUsuario.Text, pwbSenha.Password);
             if (controle.Mensagem.Equals(""))
             {
-                frmInicio frmI = new frmInicio();
+                frmInicio frmI = new frmInicio(txbUsuario.Text);
                 frmI.ShowDialog();
             }
             else

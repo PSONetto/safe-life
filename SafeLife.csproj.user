@@ -13,6 +13,9 @@
     <Compile Update="Apresentacao\frmCadastroEmpresa.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Apresentacao\frmCadastroFunc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Apresentacao\frmCadastroTitular.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
     <Compile Update="Apresentacao\frmPEEEmpresa.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Apresentacao\frmPEEFunc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Apresentacao\frmPEETitular.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Apresentacao\frmCadastroEmpresa.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmCadastroFunc.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Apresentacao\frmCadastroTitular.xaml">
@@ -52,6 +61,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Apresentacao\frmPEEEmpresa.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Apresentacao\frmPEEFunc.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Apresentacao\frmPEETitular.xaml">

@@ -77,12 +77,14 @@
         <CheckBox x:Name="chbAlzheimer" Content="Alzheimer" HorizontalAlignment="Left" Margin="615,335,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
         <CheckBox x:Name="chbDeficiencia" Content="Deficiência Física" HorizontalAlignment="Left" Margin="510,355,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Center" Margin="0,464,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="647,22,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnVoltar_Click"/>
         <Label Content="Data do Contrato" HorizontalAlignment="Left" Margin="30,386,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
         <DatePicker x:Name="dtpDatContrato" HorizontalAlignment="Left" Margin="30,412,0,0" VerticalAlignment="Top" Width="210" FontFamily="Arial"/>
         <Label Content="Selecione um Plano" HorizontalAlignment="Left" Margin="270,386,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
-        <ComboBox x:Name="cmbPlano" HorizontalAlignment="Center" Margin="0,414,0,0" VerticalAlignment="Top" Width="210" SelectedValuePath="Tag" SelectedValue="{Binding IsActive, Mode=TwoWay}">
-            <ComboBoxItem Content="1" Tag="Premium"/>
+        <ComboBox x:Name="cmbPlano" HorizontalAlignment="Center" Margin="0,412,0,0" VerticalAlignment="Top" Width="210" SelectedValuePath="Tag" SelectedValue="{Binding IsActive, Mode=TwoWay}">
+            <ComboBoxItem Content="Básico" Tag="1" />
+            <ComboBoxItem Content="Morte e Invalidez" Tag="2" />
+            <ComboBoxItem Content="Safe Pets" Tag="3" />
+            <ComboBoxItem Content="Premium" Tag="4" />
         </ComboBox>
     </Grid>
 </Window>

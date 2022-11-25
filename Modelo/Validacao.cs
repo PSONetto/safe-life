@@ -97,6 +97,16 @@ namespace SafeLife.Modelo
             return System.Text.RegularExpressions.Regex.IsMatch(cep, ("[0-9]{5}[0-9]{3}"));
         }
 
+        public bool validaCNPJ(String cnpj)
+        {
+            this.Mensagem = "";
+            if (cnpj.Length != 14 || !apenasNumeros.IsMatch(cnpj))
+            {
+                this.Mensagem = "CNPJ inválido!";
+            }
+            return true;
+        }
+
         public void validarUsuario(String login, String senha)
         {
             this.Mensagem = "";
@@ -121,9 +131,6 @@ namespace SafeLife.Modelo
                 DateTime hoje = DateTime.UtcNow.Date;
                 DateTime dataMaxima = hoje.AddYears(-18);
                 DateTime dataMinima = new DateTime(1900, 01, 01);
-
-
-
 
                 if (titular[1] == "")
                 {
@@ -309,16 +316,343 @@ namespace SafeLife.Modelo
             }
         }
 
+        public void validarBeneficiario(List<String> titular)
+        {
+            this.Mensagem = "";
+            try
+            {
+                if (titular[1] == "")
+                {
+                    this.Mensagem = "O campo nome é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!apenasLetras.IsMatch(titular[1]))
+                    {
+                        this.Mensagem = "O campo nome deve conter apenas letras!";
+                        return;
+                    }
+                }
+
+                if (titular[2] == "")
+                {
+                    this.Mensagem = "O campo data de nascimento é obrigatório!";
+                    return;
+                }
+
+
+                if (titular[3] == "")
+                {
+                    this.Mensagem = "O campo CPF é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!validaCPF(titular[3]))
+                    {
+                        this.Mensagem = "CPF inválido!";
+                        return;
+                    }
+                }
+
+                if (titular[4] == "")
+                {
+                    this.Mensagem = "O campo RG é obrigatório!";
+                    return;
+                }
+
+                if (titular[5] == "")
+                {
+                    this.Mensagem = "O campo Nome Mãe é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!apenasLetras.IsMatch(titular[5]))
+                    {
+                        this.Mensagem = "O campo Nome Mãe deve conter apenas letras!";
+                        return;
+                    }
+                }
+
+                if (titular[6] != "")
+                {
+                    if (!apenasLetras.IsMatch(titular[6]))
+                    {
+                        this.Mensagem = "O campo Nome Pai deve conter apenas letras!";
+                        return;
+                    }
+                }
+
+                if (!apenasNumeros.IsMatch(titular[7]))
+                {
+                    this.Mensagem = "O campo Telefone deve conter apenas números!";
+                    return;
+                }
+
+
+                if (!apenasNumeros.IsMatch(titular[8]))
+                {
+                    this.Mensagem = "O campo Celular deve conter apenas números!";
+                    return;
+                }
+
+
+                if (titular[9] == "")
+                {
+                    this.Mensagem = "O campo E-mail é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!titular[9].Contains('@') || !titular[9].Contains(".com"))
+                    {
+                        this.Mensagem = "Email inválido!";
+                        return;
+                    }
+                }
+
+                if (titular[10] == "")
+                {
+                    this.Mensagem = "O campo CEP é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!apenasNumeros.IsMatch(titular[10]))
+                    {
+                        this.Mensagem = "O campo CEP deve conter apenas números!";
+                        return;
+                    }
+                    else
+                    {
+                        if (!ValidaCep(titular[10]))
+                        {
+                            this.Mensagem = "CEP inválido!";
+                            return;
+                        }
+                    }
+                }
+
+                if (titular[11] == "")
+                {
+                    this.Mensagem = "O campo Rua é orbigatório!";
+                    return;
+                }
+
+                if (titular[12] == "")
+                {
+                    this.Mensagem = "O campo Número é orbigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!apenasNumeros.IsMatch(titular[12]))
+                    {
+                        this.Mensagem = "O campo Número deve conter apenas números!";
+                        return;
+                    }
+                }
+
+                if (titular[13] == "")
+                {
+                    this.Mensagem = "O campo Bairro é obrigatório!";
+                    return;
+                }
+
+                if (titular[15] == "")
+                {
+                    this.Mensagem = "O campo Estado é obrigatório!";
+                    return;
+                }
+
+                if (titular[16] == "")
+                {
+                    this.Mensagem = "O campo Cidade é obrigatório!";
+                    return;
+                }
+                else
+                {
+                    if (!apenasLetras.IsMatch(titular[16]))
+                    {
+                        this.Mensagem = "O campo Cidade deve conter apenas letras!";
+                        return;
+                    }
+                }
+            }
+            catch
+            {
+                this.Mensagem = "Login ou Senha inválidos!";
+            }
+        }
+
         public void validarEmpresa(List<String> listaEmpresa)
         {
             this.Mensagem = "";
 
+            if (listaEmpresa[1] == "")
+            {
+                this.Mensagem = "O campo nome é obrigatório!";
+                return;
+            }
+            else
+            {
+                if (!apenasLetras.IsMatch(listaEmpresa[1]))
+                {
+                    this.Mensagem = "O campo nome deve conter apenas letras!";
+                    return;
+                }
+            }
 
+            if (listaEmpresa[2] == "")
+            {
+                this.Mensagem = "O campo CNPJ é obrigatório!";
+            }
+            else
+            {
+                if (listaEmpresa[2].Length != 14)
+                {
+                    this.Mensagem = "O campo CNPJ deve ter 14 dígitos!";
+                }
+                else if (!apenasNumeros.IsMatch(listaEmpresa[2]))
+                {
+                    this.Mensagem = "O campo CNPJ deve conter apenas números!";
+                }
+            }
+
+            if (listaEmpresa[3] == "")
+            {
+                this.Mensagem = "O campo Telefone é obrigatório!";
+            }
+            else
+            {
+                if (listaEmpresa[3].Length != 10)
+                {
+                    this.Mensagem = "O campo telefone deve ter 10 dígitos!";
+                }
+                else if (!apenasNumeros.IsMatch(listaEmpresa[3]))
+                {
+                    this.Mensagem = "O campo telefone deve conter apenas números!";
+                }
+            }
+
+            if (listaEmpresa[4] == "")
+            {
+                this.Mensagem = "O campo E-mail é obrigatório!";
+                return;
+            }
+            else
+            {
+                if (!listaEmpresa[4].Contains('@') || !listaEmpresa[4].Contains(".com"))
+                {
+                    this.Mensagem = "Email inválido!";
+                    return;
+                }
+            }
+
+            if (listaEmpresa[5] == "")
+            {
+                this.Mensagem = "O campo CEP é obrigatório!";
+                return;
+            }
+            else
+            {
+                if (!apenasNumeros.IsMatch(listaEmpresa[5]))
+                {
+                    this.Mensagem = "O campo CEP deve conter apenas números!";
+                    return;
+                }
+                else
+                {
+                    if (!ValidaCep(listaEmpresa[5]))
+                    {
+                        this.Mensagem = "CEP inválido!";
+                        return;
+                    }
+                }
+            }
+
+            if (listaEmpresa[6] == "")
+            {
+                this.Mensagem = "O campo Rua é orbigatório!";
+                return;
+            }
+
+            if (listaEmpresa[7] == "")
+            {
+                this.Mensagem = "O campo Número é orbigatório!";
+                return;
+            }
+            else
+            {
+                if (!apenasNumeros.IsMatch(listaEmpresa[7]))
+                {
+                    this.Mensagem = "O campo Número deve conter apenas números!";
+                    return;
+                }
+            }
+
+            if (listaEmpresa[8] == "")
+            {
+                this.Mensagem = "O campo Bairro é obrigatório!";
+                return;
+            }
+
+            if (listaEmpresa[10] == "")
+            {
+                this.Mensagem = "O campo Estado é obrigatório!";
+                return;
+            }
+
+            if (listaEmpresa[11] == "")
+            {
+                this.Mensagem = "O campo Cidade é obrigatório!";
+                return;
+            }
+            else
+            {
+                if (!apenasLetras.IsMatch(listaEmpresa[11]))
+                {
+                    this.Mensagem = "O campo Cidade deve conter apenas letras!";
+                    return;
+                }
+            }
         }
 
         public void validarUsuario(List<String> listaUsuario)
         {
             this.Mensagem = "";
+
+            if (listaUsuario[1] == "")
+            {
+                this.Mensagem = "O campo nome é obrigatório!";
+            }
+            else if (listaUsuario[1].Length < 4)
+            {
+                this.Mensagem = "O campo nome deve ter mais que 4 caracteres!";
+            }
+            if (listaUsuario[2] == "")
+            {
+                this.Mensagem = "O campo E-mail é obrigatório!";
+                return;
+            }
+            else
+            {
+                if (!listaUsuario[2].Contains('@') || !listaUsuario[2].Contains(".com"))
+                {
+                    this.Mensagem = "Email inválido!";
+                    return;
+                }
+            }
+            if (listaUsuario[3] == "")
+            {
+                this.Mensagem = "A senha é obrigatória!";
+            }
+            else if (listaUsuario[3].Length < 4)
+            {
+                this.Mensagem = "A senha deve ter mais que 4 caracteres";
+            }
         }
     }
 }

@@ -1,6 +1,9 @@
-﻿using SafeLife.Modelo;
+﻿using SafeLife.DAL;
+using SafeLife.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,7 +67,7 @@ namespace SafeLife.Apresentacao
             listTitular.Add(txbComplemento.Text);
             listTitular.Add(cmbEstado.Text);
             listTitular.Add(txbCidade.Text);
-            listTitular.Add(cmbPlano.Text);
+            listTitular.Add(cmbPlano.SelectedValue?.ToString());
             listTitular.Add((bool)chbCardiaco.IsChecked ? "1" : "0");
             listTitular.Add((bool)chbAsma.IsChecked ? "1" : "0");
             listTitular.Add((bool)chbGenetica.IsChecked ? "1" : "0");
@@ -84,11 +87,6 @@ namespace SafeLife.Apresentacao
             {
                 MessageBox.Show(controle.Mensagem, "Cadastrado com Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-        }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

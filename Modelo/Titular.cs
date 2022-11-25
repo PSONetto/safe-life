@@ -12,5 +12,7 @@ namespace SafeLife.Modelo
         public List<Beneficiario> Beneficiarios { get; set; }
         public Contrato contrato = new Contrato();
         public String Plano { set; get; }
+
+        public String CodEmpresa { set; get; }
     }
 }

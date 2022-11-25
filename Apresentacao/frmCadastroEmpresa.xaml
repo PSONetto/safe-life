@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SafeLife.Apresentacao"
         mc:Ignorable="d"
-        Title="Safe Life | Cadastro de Empresa" Height="450" Width="510">
+        Title="Safe Life | Cadastro de Empresa" Height="500" Width="510">
     <Grid>
         <Label Content="Cadastrar Empresa" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22"/>
         <Label Content="Razão Social *" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
@@ -59,6 +59,5 @@
         <Label Content="Cidade *" HorizontalAlignment="Left" Margin="270,261,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" RenderTransformOrigin="-0.253,0.615"/>
         <TextBox x:Name="txbCidade" HorizontalAlignment="Left" Margin="270,287,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" FontFamily="Arial" FontSize="14"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Center" Margin="0,383,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="416,22,0,0" Padding="15, 5" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Click="btnVoltar_Click"/>
     </Grid>
 </Window>

@@ -42,3 +42,7 @@ C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPE
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEEmpresa.baml
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEBeneficiarios.g.cs
 C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEBeneficiarios.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroFunc.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmCadastroFunc.baml
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEFunc.g.cs
+C:\Users\plini\source\repos\SafeLife\obj\Debug\net6.0-windows\Apresentacao\frmPEEFunc.baml

@@ -43,21 +43,17 @@ namespace SafeLife.Apresentacao
             listEmpresa.Add(txbCNPJ.Text);
             listEmpresa.Add(txbTelefone.Text);
             listEmpresa.Add(txbEmail.Text);
+            listEmpresa.Add(txbCEP.Text);
             listEmpresa.Add(txbRua.Text);
             listEmpresa.Add(txbNumero.Text);
             listEmpresa.Add(txbBairro.Text);
             listEmpresa.Add(txbComplemento.Text);
-            listEmpresa.Add(this.Estado);
+            listEmpresa.Add(cmbEstado.Text);
             listEmpresa.Add(txbCidade.Text);
 
             controle.cadastrarEmpresa(listEmpresa);
 
             MessageBox.Show(controle.Mensagem, "Erro no Cadastro", MessageBoxButton.OK, MessageBoxImage.Warning);
-        }
-
-        private void btnVoltar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
